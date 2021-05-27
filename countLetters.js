@@ -9,7 +9,7 @@ const assertEqual = function (actual, expected) {
 const countLetters = function (string) {
   let count = {}
   for (const i of string){
-    console.log(i)
+    // console.log(i)
     if (i !== ' '){
       if (count.hasOwnProperty(i)){  // if count[i] true
       count[i] += 1

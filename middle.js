@@ -1,5 +1,5 @@
-const assertArrayEqual = function (actual, expected) {
-  if (actual === expected) {
+const assertArraysEqual = function (actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
@@ -18,23 +18,22 @@ const eqArrays = function (arrOne, arrTwo) {
   return true;
 }
 
-assertArrayEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
-assertArrayEqual(eqArrays([1, 2, 3], [3, 2, 1]), true) // => false
-
-assertArrayEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true) // => true
-assertArrayEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true) // => false
-
-
-const without = function (arrOne, arrTwo) {
-  let newArr = []
-  for (let i = 0; i < arrOne.length; i++){
-    if (arrOne[i] !== arrTwo[i]){
-      newArr.push(arrOne[i])
-    }
+const middle = function(array){
+  newArr = []
+  if (array.length < 3) {
+    return newArr;
   }
+  if (array.length % 2 === 0){
+    newArr.push(array[array.length/2 - 1], array[array.length/2])
+      } else {
+    newArr.push(array[(array.length - 1) / 2]) //alternative way to do it is math.floor(array.length / 2)
+      }
   return newArr
-} 
+}
 
-console.log(without([1, 2, 3], [1, 2]))
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+assertArraysEqual(middle([1]), []) // => []
+assertArraysEqual(middle([1, 2]), []) // => []
+assertArraysEqual(middle([1, 2, 3]), [2]) // => [2]
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]) // => [3]
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]) // => [2, 3]
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]) // => [3, 4]

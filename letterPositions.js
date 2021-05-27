@@ -1,5 +1,5 @@
-const assertArrayEqual = function (actual, expected) {
-  if (actual === expected) {
+const assertArraysEqual = function (actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
@@ -34,5 +34,5 @@ const letterPositions = function (sentence) {
   return results;
 };
 
-assertArrayEqual(eqArrays(letterPositions("hello").e, [1],), true);
+assertArraysEqual(letterPositions("hello").e, [1]);
 
