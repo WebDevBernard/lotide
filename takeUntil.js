@@ -20,11 +20,11 @@ const eqArrays = function (arrOne, arrTwo) {
 
 const takeUntil = function (array, callback) {
   const sliceArray = [];
-  for (const x of array) {  // x of array is data1[i], array is data1
-    if (callback(x)) {   //callback is x >= x < 0 callback returns empty array
+  for (const i of array) {  // x of array is data1[i], array is data1
+    if (callback(i)) {   //callback function (i) return { x < 0 } callback returns empty array
       return sliceArray;  //returns empty array
     }
-    sliceArray.push(x);
+    sliceArray.push(i);
   }
 }
 
