@@ -24,7 +24,7 @@ const takeUntil = function (array, callback) {
     if (callback(x)) {   //callback is x >= x < 0 callback returns empty array
       return sliceArray;  //returns empty array
     }
-    sliceArray.push(index);
+    sliceArray.push(x);
   }
 }
 
