@@ -5,14 +5,14 @@ const assertEqual = function (actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-
-const findKeyByValue = function (genre, tvShow) {
-  for (const key in genre) {
-    if (tvShow === (genre[key])) {
-      return key;
+// changed from for in to for of loop over array of Objects.keys(genre)
+const findKeyByValue = function(genre, tvShow) {
+  for (const key of Object.keys(genre)) {
+    if (tvShow === genre[key]) {
+      return key;  // 'key' represents the string value of this object key
     }
   }
-}
+};
 
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",

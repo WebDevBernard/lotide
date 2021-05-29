@@ -20,7 +20,7 @@ const eqArrays = function (arrOne, arrTwo) {
 
 const takeUntil = function (array, callback) {
   const sliceArray = [];
-  for (const i of array) {  // x of array is data1[i], array is data1
+  for (const i of array) {
     if (callback(i)) {   //callback function (i) return { x < 0 } callback returns empty array
       return sliceArray;  //returns empty array
     }
