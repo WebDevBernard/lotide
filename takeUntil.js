@@ -1,4 +1,4 @@
-const assertArraysEqual = function (actual, expected) {
+const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,7 +6,7 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-const eqArrays = function (arrOne, arrTwo) {
+const eqArrays = function(arrOne, arrTwo) {
   if (arrOne.length !== arrTwo.length) {
     return false;
   }
@@ -16,9 +16,9 @@ const eqArrays = function (arrOne, arrTwo) {
     }
   }
   return true;
-}
+};
 
-const takeUntil = function (array, callback) {
+const takeUntil = function(array, callback) {
   const sliceArray = [];
   for (const i of array) {
     if (callback(i)) {   //callback function (i) return { x < 0 } callback returns empty array
@@ -26,7 +26,7 @@ const takeUntil = function (array, callback) {
     }
     sliceArray.push(i);
   }
-}
+};
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);

@@ -1,4 +1,4 @@
-const eqArrays = function (arrOne, arrTwo) {
+const eqArrays = function(arrOne, arrTwo) {
   if (arrOne.length !== arrTwo.length) {
     return false;
   }
@@ -8,9 +8,9 @@ const eqArrays = function (arrOne, arrTwo) {
     }
   }
   return true;
-}
+};
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
   }
