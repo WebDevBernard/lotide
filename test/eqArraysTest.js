@@ -1,0 +1,1 @@
+const eqArrayTest = require('../eqArrayTest');
