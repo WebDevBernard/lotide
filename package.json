@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@bernard9/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lotide assertion library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/bernard9/lotide.git"
   },
-  "author": "",
+  "author": "bernard yang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bernard9/lotide/issues"
