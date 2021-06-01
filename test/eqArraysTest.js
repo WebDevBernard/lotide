@@ -1,1 +1,1 @@
-const eqArrayTest = require('../eqArrayTest');
+const eqArrays = require('../eqArrays');
